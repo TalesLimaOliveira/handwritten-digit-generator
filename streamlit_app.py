@@ -1,5 +1,6 @@
-
 import streamlit as st
+st.set_page_config(layout="centered", page_title="Handwritten Digit Generator")
+
 import torch
 import torch.nn as nn
 from PIL import Image
@@ -41,7 +42,6 @@ def load_generator_model(model_path="generator_final.pth"):
     try:
         generator.load_state_dict(torch.load(model_path, map_location=device))
         generator.eval() # Set to evaluation mode for inference
-        st.success(f"Generator model loaded successfully from {model_path}")
     except FileNotFoundError:
         st.error(f"Error: Model file not found at {model_path}. Please ensure the model is trained and saved.")
         st.stop() # Stop execution if model is not found
@@ -74,8 +74,6 @@ def generate_digit_images(digit, num_images=5):
     return pil_images
 
 # --- Streamlit UI ---
-st.set_page_config(layout="centered", page_title="Handwritten Digit Generator")
-
 st.title("Handwritten Digit Generator")
 st.write("Generate 5 diverse images of a handwritten digit (0-9) similar to the MNIST dataset.")
 
@@ -92,6 +90,4 @@ if st.button("Generate Images"):
     cols = st.columns(5) # Create 5 columns for the images
     for i, img in enumerate(images):
         with cols[i]:
-            st.image(img, caption=f"Digit {selected_digit} - Image {i+1}", use_column_width=True)
-    st.success("Images generated!")
-
+            st.image(img, caption=f"Digit {selected_digit} - Image {i+1}", use_container_width=True)
