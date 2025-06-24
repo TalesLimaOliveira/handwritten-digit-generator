@@ -1,3 +1,4 @@
+
 import streamlit as st
 import torch
 import torch.nn as nn
@@ -93,3 +94,4 @@ if st.button("Generate Images"):
         with cols[i]:
             st.image(img, caption=f"Digit {selected_digit} - Image {i+1}", use_column_width=True)
     st.success("Images generated!")
+
