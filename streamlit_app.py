@@ -19,7 +19,7 @@ with left_col:
         <span style="color:#888; font-size:1.08em; font-weight:bold;">See other projects:</span><br>
         <a href="https://ocr-taleslimaoliveira.streamlit.app/" style="color:#1a73e8; text-decoration:none; font-size:1.1em; display:block; margin-bottom:0.3em; margin-left:0.7em;">• Character Recognition</a>
         <span style="color:#444; background:#e5e5e5; border-radius:6px; font-size:1.1em; display:inline-block; margin-bottom:0.3em; margin-left:0.7em; padding:2px 8px; width:auto;">• Digit Generator</span>
-        <a href="https://github.com/TalesLimaOliveira" style="color:#1a73e8; text-decoration:none; font-size:1.1em; display:block; margin-left:0.7em;">• My Github</a>
+        <a href="https://github.com/TalesLimaOliveira" target="_blank" style="color:#1a73e8; text-decoration:none; font-size:1.1em; display:block; margin-left:0.7em;">• My Github</a>
     </div>
     ''', unsafe_allow_html=True)
 
